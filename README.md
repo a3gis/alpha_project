@@ -1,2 +1,2 @@
-alpha_project
+Alpha Project
 =============
