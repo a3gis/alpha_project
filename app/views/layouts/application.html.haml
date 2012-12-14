@@ -6,9 +6,10 @@
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 	%body
-		%p#user
+		#user
 			- if current_user
-				Logged in as <b>#{current_user.pseudo}</b>
+				Logged in as <b>#{current_user.pseudo}</b>. #{link_to 'Log out', sessions_path, method: :delete}.
 			- else
-				Not logged in. #{link_to 'Log In', new_session_path} or #{link_to 'Register', new_user_path}
+				Not logged in. Not already a member ? <b>#{link_to 'Register', new_user_path}</b> or <b>Log In</b> :
+				= render 'form_login'
 		= yield 

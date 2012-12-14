@@ -1,0 +1,5 @@
+= form_tag sessions_path, method: :post, class: "form-inline", style: "display: inline" do
+	= text_field_tag :email, "", placeholder: "Email", class: "input-small"
+	= password_field_tag :password, "", placeholder: "Password", class: "input-small"
+		
+	= submit_tag "Submit", class: "btn"
